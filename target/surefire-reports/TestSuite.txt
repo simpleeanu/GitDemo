@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.51 s <<< FAILURE! - in TestSuite
+CarTest(TestNGPractice.CarLoanTest)  Time elapsed: 0.395 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'url1' is required by @Test on method CarTest but has not been marked @Optional or defined
+
+
+CarTest2(TestNGPractice.CarLoanTest)  Time elapsed: 0.097 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'url' is required by @Test on method CarTest2 but has not been marked @Optional or defined
+
+

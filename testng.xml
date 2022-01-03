@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuiteName" parallel="tests" thread-count="6">
+<parameter name="url" value="http://google.com"/>
+	  <listeners >
+	  <listener class-name="TestNGPractice.TestNGListener"/>
+	  </listeners>
+	  
+
+  <test thread-count="5" name="HousingTest">
+  <parameter name="url1" value="http://googlehouse.com"/>
+  
+	  <classes>
+	  	<class name="TestNGPractice.HousingLoanTest">
+		  	<methods>
+		  		<include name="Home.*"></include>
+		  	</methods>
+		  	<methods>
+		  		<exclude name="Mobile.*"></exclude>
+		  	</methods>
+		  	
+	  	</class>
+	  </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="CarTest">
+    <parameter name="url1" value="http://googlecar.com"/>
+  
+	  <classes>
+	  	<class name="TestNGPractice.CarLoanTest">
+	  		<methods>
+	  			<exclude name="CarTest1"/>
+	  		</methods>
+	  		 
+	  	</class>
+	  </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count ="5" name="PersonalLoan">
+  <classes>
+  <class name="TestNGPractice.PersonalLoan"></class>
+  </classes>
+  </test>
+</suite> <!-- Suite -->
